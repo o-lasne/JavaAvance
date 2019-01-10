@@ -1,0 +1,68 @@
+package Ihm;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class premierFormulaire {
+
+	public static void main(String[] args) {
+		//Création de la fenêtre
+		JFrame fenetre = new JFrame();
+		fenetre.setTitle("Merci de remplir");
+		JPanel container = new JPanel();
+		JPanel top = new JPanel();
+		JPanel midle = new JPanel();
+		JPanel bottom = new JPanel();
+		JPanel pButton = new JPanel();
+		fenetre.setSize(250,250);
+		
+		
+		//Création d'un label est ajout dans la fenêtre	JLabel 
+		JLabel labelNom = new JLabel("Nom");
+		fenetre.getContentPane().add(labelNom);
+		
+		JLabel labelPrenom = new JLabel("Prenom");
+		fenetre.getContentPane().add(labelPrenom);
+		JLabel labelNote = new JLabel("Note");
+		fenetre.getContentPane().add(labelNote);
+		
+		// Création d'un TextField
+	JTextField jtf = new JTextField("");
+	   
+		// Création des bouttons
+	 JButton bValider = new JButton ("Valider");
+	 JButton bAnnuler = new JButton ("Annuler");
+	
+		//Dimension de la Textfield
+	 jtf.setPreferredSize(new Dimension(150, 30));
+	 JTextField jtfPrenom = new JTextField("");
+	 jtfPrenom.setPreferredSize(new Dimension(150, 30));
+	 JTextField jtfNote = new JTextField("");
+	 jtfNote.setPreferredSize(new Dimension(150, 30));
+		
+		// Positionnement 
+	 	top.add(labelNom);
+	 	top.add(jtf);
+	 	midle.add(labelPrenom);
+	 	midle.add(jtfPrenom);
+	 	bottom.add(labelNote);
+	 	bottom.add(jtfNote);
+	 	pButton.add(bValider);
+	 	pButton.add(bAnnuler);
+	 	container.add(top,BorderLayout.NORTH);
+	 	container.add(midle,BorderLayout.NORTH);
+	 	container.add(bottom,BorderLayout.NORTH);
+	 	container.add(pButton,BorderLayout.NORTH);
+	 	
+	 	//Rendre la fenêtre visible
+	 	fenetre.setContentPane(container);
+	 	fenetre.setVisible(true);
+	}
+
+}
