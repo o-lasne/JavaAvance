@@ -56,6 +56,7 @@ public class Formulaire {
 		JTextField jtfNote = new JTextField("");
 	 	jtfNote.setPreferredSize(new Dimension(150, 20));
 		
+	 	//méthode ActionListener qui affiche les éléments du formulaire
 	 	class Moteur extends Frame implements ActionListener {
 	 		TextField text = new TextField(20);
 	 		
@@ -67,8 +68,9 @@ public class Formulaire {
 	 		}
 	 	}
 	 		
-	 	bValider.addActionListener(new Moteur());
-	 	
+	 	//Exécute la fonction ActionListener à l'appuie du bouton Valider
+	 	bValider.addActionListener(new Moteur());	 		
+	 		 	
 		// Positionnement 
 	 	top.add(labelNom);
 	 	top.add(jtf);
