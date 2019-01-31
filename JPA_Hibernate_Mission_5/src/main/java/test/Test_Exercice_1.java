@@ -17,7 +17,8 @@ public class Test_Exercice_1 {
 		
 		Adresse_Exercice_1 addExo1 = new Adresse_Exercice_1("Rue du riz", "00000", "Rome");
 		sExo1.setAdresse(addExo1);
-
+		System.out.println("La ville de Juliette est : " + addExo1.getVille());
+		
 		StudentDAO_Exercice_1 sDAOExo2 = new StudentDAO_Exercice_1();
 		sDAOExo2.addStudent(sExo1);
 	}
